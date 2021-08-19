@@ -1,7 +1,7 @@
 # MySQL. Versions 5.5.8 and up are supported.
 #
 # Install the MySQL driver
-#   gem install mysql2
+#   gem instLucesita123#
 #
 # Ensure the MySQL gem is defined in your Gemfile
 #   gem 'mysql2'
@@ -14,7 +14,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
+  password: Lucesita123#
   host: localhost
 
 development:
