@@ -1,0 +1,32 @@
+.container
+  .row
+    .col-lg-7.mx-auto
+      .card
+        %article.card-body
+          %h4.card-title.text-center.mb-3.mt-1.text-uppercase.text-monospace
+            = t('.sign_in')
+          %hr
+          %p.text-center
+            %span.text-uppercase.text-monospace= t('labels.welcome')
+            %span.font-weight-bold.text-uppercase.text-monospace= t('labels.welcome_message')
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .form-group
+              .input-group
+                .input-group-prepend
+                  %span.input-group-text
+                    %i.fas.fa-at
+                = f.email_field :email, autocomplete: 'email', class: 'form-control', placeholder: :email, required: true
+            .form-group
+              .input-group
+                .input-group-prepend
+                  %span.input-group-text
+                    %i.fas.fa-key
+                = f.password_field :password, autocomplete: 'current-password', class: 'form-control', placeholder: :password, required: true
+            - if devise_mapping.rememberable?
+              .form-check.form-group
+                = f.check_box :remember_me, class: 'form-check-input'
+                = f.label :remember_me, class: 'form-check-label'
+            .form-group
+              = f.submit t('.sign_in'), class: 'btn btn-primary btn-block'
+            %p.text-center
+              = render 'devise/shared/links'

@@ -1,0 +1,38 @@
+#modalBrowserUnsupported.modal.fade.browser-modal-lg.px-0{"aria-hidden": "true", "aria-labelledby": "#modalBrowserUnsupported", role: "dialog", tabindex: "-1"}
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-body.text-center
+        %h4.text-uppercase.text-monospace.mb-4
+          = t('errors.browser.update_browser')
+          = icon('far', 'surprise')
+        %p.mb-4
+          = t('errors.browser.old_browser')
+        .row
+          .col-lg-3.mb-2
+            .card
+              .card-body
+                %h2.card-title
+                  = icon('fab', 'chrome')
+                %h6.card-subtitle.mb-2.text-muted Google Chrome
+                = link_to(t('errors.browser.browser_website'), 'https://www.google.com/chrome', target: '_blank', class: 'btn btn-primary')
+          .col-lg-3.mb-2
+            .card
+              .card-body
+                %h2.card-title
+                  = icon('fab', 'firefox')
+                %h6.card-subtitle.mb-2.text-muted Firefox
+                = link_to(t('errors.browser.browser_website'), 'https://www.mozilla.org/firefox', target: '_blank', class: 'btn btn-primary')
+          .col-lg-3.mb-2
+            .card
+              .card-body
+                %h2.card-title
+                  = icon('fab', 'safari')
+                %h6.card-subtitle.mb-2.text-muted Safari
+                = link_to(t('errors.browser.browser_website'), 'https://support.apple.com/downloads/#safari', target: '_blank', class: 'btn btn-primary')
+          .col-lg-3.mb-2
+            .card
+              .card-body
+                %h2.card-title
+                  = icon('fab', 'edge')
+                %h6.card-subtitle.mb-2.text-muted Microsoft Edge
+                = link_to(t('errors.browser.browser_website'), 'https://www.microsoft.com/es-mx/windows/microsoft-edge', target: '_blank', class: 'btn btn-primary')

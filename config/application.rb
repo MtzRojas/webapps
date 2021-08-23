@@ -18,5 +18,16 @@ module Webapps
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+
+
+    #webapps
+    locale_files = Dir["#{Rails.root}/config/locales/??.yml"]
+
+    config.i18n.available_locales = locale_files.map do |d| 
+      d.split('/').last.split('.').first
+    end
+
+    config.i18n.default_locale = :es
   end
 end

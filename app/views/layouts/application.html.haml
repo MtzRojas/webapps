@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width,initial-scale=1.0", :name => "viewport"}/
+    %title FEDECAS
+    = csrf_meta_tags
+    = csp_meta_tag
+    -# = favicon_link_tag asset_path('')
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    -# = javascript_pack_tag 'application', 'javascript', 'data-turbolinks-track': 'reload'
+    -# = javascript_pack_tag    'navbar/application', 'data-turbolinks-track': 'reload'
+    = stylesheet_pack_tag    'navbar/style'
+    -# = javascript_pack_tag    'main-footer/application', 'data-turbolinks-track': 'reload'
+    = stylesheet_pack_tag    'main-footer/style'
+    -# = stylesheet_link_tag    'login', media: 'all', 'data-turbolinks-track': 'reload'  if login_views?
+    -# = javascript_tag 'data-turbolinks-track': 'reload' do
+    -#   I18n.defaultLocale = "#{ I18n.default_locale }";
+    -#   I18n.locale = "#{ I18n.locale }";
+    -#   I18n.availableLocales = "#{ locales_to_s(I18n.available_locales) }"
+
+  %body
+    = render('shared/unsupported_browser') if supported_ie?
+    %header
+      #navbar{ class: ('d-none' if login_views?) }
+        %navbar{ navbar_params }
+    %main.mx-4.mb-4
+      .main-content.my-4
+        .container.px-0
+          - unless flash.empty?
+            = render partial: 'layouts/flash_messages'
+        = yield
+    #footer
+      %main-footer

@@ -3,6 +3,14 @@
 class Ability
   include CanCan::Ability
 
+  permissions = {
+    { dev: :manage, models: :all }
+    { admin: :manage, models: :all }
+    { manager: :manage, models: :all }
+    { enterprise: :manage, models: :all }
+    { enterprise_manager: :manage, models: :all }
+  }
+
   def initialize(user)
     # Define abilities for the passed in user here. For example:
     #
@@ -30,5 +38,11 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
+
+    if user.has_role? :admin
+      can :manage, :all
+    else
+      can :read, :all
+    end
   end
 end
