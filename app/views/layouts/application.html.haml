@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width,initial-scale=1.0", :name => "viewport"}/
+    %title FEDECAS
+    = csrf_meta_tags
+    = csp_meta_tag
+    -# = favicon_link_tag asset_path('')
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body
+    = render('shared/unsupported_browser') if supported_ie?
+    %header
+      #navbar{ class: ('d-none' if login_views?) }
+        %navbar{ navbar_params }
+    %main.mx-4.mb-4
+      .main-content.my-4
+        .container.px-0
+          - unless flash.empty?
+            = render partial: 'layouts/flash_messages'
+        = yield
+    #footer
+      %main-footer
