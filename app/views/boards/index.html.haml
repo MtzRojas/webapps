@@ -1,1 +1,176 @@
-= 'lol'
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title FEDECAS - People Finder
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "keywords"}/
+    / Google Fonts
+    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i", :rel => "stylesheet"}/
+  %body
+    / ======= Header =======
+    %header#header.fixed-top
+      .container.d-flex.align-items-center.justify-content-between
+        %h1.logo
+          %a{:href => "index.html"} FEDECAS
+        / Uncomment below if you prefer to use an image logo
+        / <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+        %nav#navbar.navbar
+          %ul
+            %li
+              %a.nav-link.scrollto.active{:href => "#hero"} Index
+            %li
+              %a.nav-link.scrollto{:href => "#about"} Nosotros
+            %li.dropdown
+              %a{:href => "#"}
+                %span Servicios
+                %i.bi.bi-chevron-down
+              %ul
+                %li
+                  %a{:href => "#"} Afiliadas
+                %li.dropdown
+                  %a{:href => "#"}
+                    %span Afiliadas Autorizadas
+                    %i.bi.bi-chevron-right
+                  %ul
+                    %li
+                      %a{:href => "#"} Busqueda en Listas de PPE y PLB
+                    %li
+                      %a{:href => "#"} Reportes Regulatorios
+                    %li
+                      %a{:href => "#"} Reportes CONDUSEF
+                    %li
+                      %a{:href => "#"} Asesoria Fiscal
+                    %li
+                      %a{:href => "#"} Asesoria Legal
+                %li
+                  %a{:href => "#"} No Afiliadas - Busqueda en Listas
+                %li
+                  %a{:href => "#"} No Afiliadas - Reportes Regulatorios
+                %li
+                  %a{:href => "#"} No Afiliadas - Asesoria
+            %li
+              %a.nav-link.scrollto{:href => "#contact"} Contactanos
+            %li
+              %a.getstarted.scrollto{:href => "#about"} Log In
+          %i.bi.bi-list.mobile-nav-toggle
+        / .navbar
+    / End Header
+    / ======= Hero Section =======
+    %section#hero.d-flex.align-items-center
+      .container
+        .row
+          .col-lg-6.pt-5.pt-lg-0.order-2.order-lg-1.d-flex.flex-column.justify-content-center
+            %h1 Estamos Trabajando
+            %h2 Para otorgarte mejores servicios
+            .d-flex
+              %a.btn-get-started.scrollto{:href => "#about"} Log In
+              %a.glightbox.btn-watch-video{:href => ""}
+                %i.bi.bi-play-circle
+                %span Unetenos!!!
+          .col-lg-6.order-1.order-lg-2.hero-img
+            %img.img-fluid.animated
+              =image_tag('shared/working.png')
+    / End Hero
+    %main#main
+      / ======= Featured Services Section =======
+      %section#featured-services.featured-services
+        .container
+          .row
+            .col-lg-4.col-md-6
+              .icon-box
+                .icon
+                  %i.bi.bi-laptop
+                %h4.title
+                  %a{:href => ""} Lorem Ipsum
+                %p.description Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+            .col-lg-4.col-md-6.mt-4.mt-md-0
+              .icon-box
+                .icon
+                  %i.bi.bi-card-checklist
+                %h4.title
+                  %a{:href => ""} Dolor Sitema
+                %p.description Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata
+            .col-lg-4.col-md-6.mt-4.mt-lg-0
+              .icon-box
+                .icon
+                  %i.bi.bi-clipboard-data
+                %h4.title
+                  %a{:href => ""} Sed ut perspiciatis
+                %p.description Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+      / End Featured Services Section
+      / ======= About Section =======
+      %section#about.about
+        .container
+          .row
+            .col-lg-6
+              %img.img-fluid{:alt => "", :src => "assets/img/about.png"}/
+            .col-lg-6.pt-4.pt-lg-0.content
+              %h3 Voluptatem dignissimos provident quasi corporis voluptates
+              %p.fst-italic
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+              %ul
+                %li
+                  %i.bi.bi-check-circle
+                  Ullamco laboris nisi ut aliquip ex ea commodo consequat
+                %li
+                  %i.bi.bi-check-circle
+                  Duis aute irure dolor in reprehenderit in voluptate velit
+                %li
+                  %i.bi.bi-check-circle
+                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda
+              %p
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur.
+      / End About Section
+    / End #main
+    / ======= Footer =======
+    %footer#footer
+      .footer-top
+        .container
+          .row.justify-content-center
+            .col-lg-6
+              %h3 FEDECAS
+              %p Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.
+          .row.footer-newsletter.justify-content-center
+            .col-lg-6
+              %form{:action => "", :method => "post"}
+                %input{:name => "email", :placeholder => "Enter your Email", :type => "email"}/
+                %input{:type => "submit", :value => "Subscribe"}/
+          .social-links
+            %a.twitter{:href => "#"}
+              %i.bx.bxl-twitter
+            %a.facebook{:href => "#"}
+              %i.bx.bxl-facebook
+            %a.instagram{:href => "#"}
+              %i.bx.bxl-instagram
+            %a.google-plus{:href => "#"}
+              %i.bx.bxl-skype
+            %a.linkedin{:href => "#"}
+              %i.bx.bxl-linkedin
+      .container.footer-bottom.clearfix
+        .copyright
+          © Copyright
+          = succeed "." do
+            %strong
+              %span FEDECAS
+        .credits
+          / All the links in the footer should remain intact.
+          / You can delete the links only if you purchased the pro version.
+          / Licensing information: https://bootstrapmade.com/license/
+          / Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/FEDECAS-free-simple-bootstrap-template/
+    / End Footer
+    %a.back-to-top.d-flex.align-items-center.justify-content-center{:href => "#"}
+      %i.bi.bi-arrow-up-short
+    / Vendor JS Files
+    %script{:src => "assets/vendor/bootstrap/js/bootstrap.bundle.min.js"}
+    %script{:src => "assets/vendor/glightbox/js/glightbox.min.js"}
+    %script{:src => "assets/vendor/isotope-layout/isotope.pkgd.min.js"}
+    %script{:src => "assets/vendor/php-email-form/validate.js"}
+    %script{:src => "assets/vendor/purecounter/purecounter.js"}
+    %script{:src => "assets/vendor/swiper/swiper-bundle.min.js"}
+    / Template Main JS File
+    %script{:src => "assets/js/main.js"}

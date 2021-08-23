@@ -8,17 +8,9 @@
     = csp_meta_tag
     -# = favicon_link_tag asset_path('')
     = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    -# = javascript_pack_tag 'application', 'javascript', 'data-turbolinks-track': 'reload'
-    -# = javascript_pack_tag    'navbar/application', 'data-turbolinks-track': 'reload'
-    = stylesheet_pack_tag    'navbar/style'
-    -# = javascript_pack_tag    'main-footer/application', 'data-turbolinks-track': 'reload'
-    = stylesheet_pack_tag    'main-footer/style'
-    -# = stylesheet_link_tag    'login', media: 'all', 'data-turbolinks-track': 'reload'  if login_views?
-    -# = javascript_tag 'data-turbolinks-track': 'reload' do
-    -#   I18n.defaultLocale = "#{ I18n.default_locale }";
-    -#   I18n.locale = "#{ I18n.locale }";
-    -#   I18n.availableLocales = "#{ locales_to_s(I18n.available_locales) }"
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
     = render('shared/unsupported_browser') if supported_ie?

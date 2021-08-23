@@ -56,6 +56,7 @@ group :development do
   gem 'awesome_print'
   gem 'pry-rails'
   gem 'rubocop'
+  gem 'erb2haml', group: :development
 end
 
 group :test do
