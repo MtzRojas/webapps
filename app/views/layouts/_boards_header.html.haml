@@ -1,0 +1,50 @@
+#header.fixed-top
+  .container.d-flex.align-items-center.justify-content-between
+    %h1.logo
+      %a{:href => boards_path} FEDECAS BlackList
+    / Uncomment below if you prefer to use an image logo
+    / <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+    %nav#navbar.navbar
+      %ul
+        %li
+          %a.nav-link.scrollto.active{:href => boards_path} Home
+        %li
+          %a.nav-link.scrollto{:href => "#about"} Nosotros
+        %li.dropdown
+          %a{:href => "#"}
+            %span Servicios
+            %i.bi.bi-chevron-down
+          %ul
+            %li
+              %a{:href => "#"} Afiliadas
+            %li.dropdown
+              %a{:href => "#"}
+                %span Afiliadas Autorizadas
+                %i.bi.bi-chevron-right
+              %ul
+                %li
+                  %a{:href => "#"} Busqueda en Listas de PPE y PLB
+                %li
+                  %a{:href => "#"} Reportes Regulatorios
+                %li
+                  %a{:href => "#"} Reportes CONDUSEF
+                %li
+                  %a{:href => "#"} Asesoria Fiscal
+                %li
+                  %a{:href => "#"} Asesoria Legal
+            %li
+              %a{:href => "#"} No Afiliadas - Busqueda en Listas
+            %li
+              %a{:href => "#"} No Afiliadas - Reportes Regulatorios
+            %li
+              %a{:href => "#"} No Afiliadas - Asesoria
+        %li
+          %a.nav-link.scrollto{:href => "#contact"} Contactanos
+        %li
+          - if current_user.present?
+            %a.getlogout{:href => destroy_user_session_path} Log Out
+          - else
+            %a.getstarted{:href => new_user_session_path} Log In
+      %i.bi.bi-list.mobile-nav-toggle
+    / .navbar
+/ End Header

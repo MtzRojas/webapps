@@ -2,10 +2,15 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width,initial-scale=1.0", :name => "viewport"}/
-    %title FEDECAS
+    %title FEDECAS - Black list
     = csrf_meta_tags
     = csp_meta_tag
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "keywords"}/
+    / Google Fonts
+    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i", :rel => "stylesheet"}/
     -# = favicon_link_tag asset_path('')
     = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -14,9 +19,15 @@
 
   %body
     = render('shared/unsupported_browser') if supported_ie?
-    %header
-      #navbar{ class: ('d-none' if login_views?) }
-        %navbar{ navbar_params }
+    %Header
+      -if controller.controller_name == 'boards'
+        = render partial: 'layouts/boards_header'
+      -else
+        = render partial: 'layouts/header'
+    %br
+    %br
+    %br
+    %br
     %main.mx-4.mb-4
       .main-content.my-4
         .container.px-0
@@ -24,4 +35,6 @@
             = render partial: 'layouts/flash_messages'
         = yield
     #footer
-      %main-footer
+      = render partial: 'layouts/footer'
+  %a.back-to-top.d-flex.align-items-center.justify-content-center{:href => "#"}
+    %i.bi.bi-arrow-up-short
