@@ -1,0 +1,24 @@
+#header.fixed-top
+  .container.d-flex.align-items-center.justify-content-between
+    %h1.logo
+      %a{:href => boards_path} FEDECAS BlackList
+    / Uncomment below if you prefer to use an image logo
+    / <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+    %nav#navbar.navbar
+      %ul
+        %li
+          %a.nav-link.scrollto.active{:href => boards_path} Home
+        %li
+          %a.nav-link.scrollto{:href => "#about"} Black Lists
+        %li
+          %a.nav-link.scrollto{:href => "#about"} Administracion
+        %li
+          %a.nav-link.scrollto{:href => "#contact"} Perfil
+        %li
+          - if current_user.present?
+            %a.getlogout{:href => destroy_user_session_path} Log Out
+          - else
+            %a.getstarted{:href => new_user_session_path} Log In
+      %i.bi.bi-list.mobile-nav-toggle
+    / .navbar
+/ End Header

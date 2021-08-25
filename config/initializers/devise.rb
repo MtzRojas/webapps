@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '1764a93f13aaddf6817f069808564088c43cc2494f72d9590e71e1832a146817bb764e1015299b4e68b4206f58da608b001e73de424fa138d48a59c98d1b1d97'
+  # config.secret_key = 'ac3ba0be6fda76dcdfb147d8c8325b48f5f81a8aa14d08a2de9a36add80e975ae4cdd40063f371773580e1f3a044a4b71ecdf92e8ece2be8d9bd716fe31089d2'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -24,7 +24,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'black_list@fedecas.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -126,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'b45f80eae5a84e34d933ef22ab43c88eee0db450ae3c2ab7b1f2a38470b61e0a9bc7f684f729314680203798912e3f528d5baa8e3aa3110b8bae8fc74280c77d'
+  # config.pepper = '9f49d70f1ea898d7894324e6833bc4d222e3aa9121adc283f7bba004c41a77dcdf0d0e650176cf49e9a3fdb2ce7b6f722caa504690c19e9ca0a1ee1945b37b27'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -244,7 +244,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = false
+  config.scoped_views = true
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
@@ -266,7 +266,7 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :delete
+  config.sign_out_via = :get
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting

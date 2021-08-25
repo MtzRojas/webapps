@@ -1,0 +1,36 @@
+/ ======= Footer =======
+#footer
+  .footer-top
+    .container
+      .row.justify-content-center
+        .col-lg-6
+          %h3 FEDECAS BlackList
+          %p Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.
+      .row.footer-newsletter.justify-content-center
+        .col-lg-6
+          %form{:action => "", :method => "post"}
+            %input{:name => "email", :placeholder => "Enter your Email", :type => "email"}/
+            %input{:type => "submit", :value => "Subscribe"}/
+      .social-links
+        %a.twitter{:href => "#"}
+          %i.bx.bxl-twitter
+        %a.facebook{:href => "#"}
+          %i.bx.bxl-facebook
+        %a.instagram{:href => "#"}
+          %i.bx.bxl-instagram
+        %a.google-plus{:href => "#"}
+          %i.bx.bxl-skype
+        %a.linkedin{:href => "#"}
+          %i.bx.bxl-linkedin
+  .container.footer-bottom.clearfix
+    .copyright
+      © Copyright
+      = succeed "." do
+        %strong
+          %span FEDECAS BlackList
+    .credits
+      / All the links in the footer should remain intact.
+      / You can delete the links only if you purchased the pro version.
+      / Licensing information: https://bootstrapmade.com/license/
+      / Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/FEDECAS-free-simple-bootstrap-template/
+/ End Footer
