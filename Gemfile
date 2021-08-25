@@ -35,6 +35,7 @@ gem 'cancancan'
 gem 'rolify'
 gem 'rails-i18n'
 gem 'browser'
+gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

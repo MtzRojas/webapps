@@ -1,1 +1,7 @@
-= 'Holi :3'
+= simple_form_for @enterprise do |e|
+  = e.input :name
+  = e.input :address
+  = e.input :legal_representative
+  = e.input :phone_number
+  = e.input :level
+  = e.button :submit
