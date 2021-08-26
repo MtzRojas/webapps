@@ -4,8 +4,15 @@ Rails.application.routes.draw do
 
   scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
     devise_for :users
-    resources :boards, only: :index
-    resources :enterprise
+    resources :enterprises
+    resources :boards, only: :index 
+    resources :dashboards, only: :index do
+      collection do
+        get :profile
+        get :admin_panel
+        get :enterprise_panel
+      end
+    end
   end
 
   root to: root_path
