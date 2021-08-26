@@ -1,0 +1,35 @@
+%main#main
+  %section#featured-services.featured-services
+    .container
+      .row.align-items-start
+        .col-lg-4.col-md-6.mt-4.mt-md-0
+          Bienvenido
+          = current_user.email
+          %hr{ class: 'bg-danger border-2 border-top border-danger' }
+          Admisnistracion de Usuarios
+          %ul.list-group.list-group-flush
+            %li.list-group-item.list-group-item-action.active{"aria-current" => "true", href: "#"} A second link item
+            %li.list-group-item.list-group-item-action{href: "#"} A second link item
+            %li.list-group-item.list-group-item-action{href: "#"} A second link item
+            %li.list-group-item.list-group-item-action{href: "#"} A second link item
+            %li.list-group-item.list-group-item-action.disabled{"aria-disabled" => "true", href: "#", tabindex: "-1"} A second link item
+          Admisnistracion de Empresas
+          %ul.list-group.list-group-flush
+            %li.list-group-item.list-group-item-action.active{"aria-current" => "true", href: "#"} A second link item
+            %li.list-group-item.list-group-item-action{href: "#"} A second link item
+            %li.list-group-item.list-group-item-action{href: "#"} A second link item
+            %li.list-group-item.list-group-item-action{href: "#"} A second link item
+            %li.list-group-item.list-group-item-action.disabled{"aria-disabled" => "true", href: "#", tabindex: "-1"} A second link item
+          Admisnistracion de Listas
+          %ul.list-group.list-group-flush
+            %li.list-group-item.list-group-item-action.active{"aria-current" => "true", href: "#"} A second link item
+            %li.list-group-item.list-group-item-action{href: "#"} A second link item
+            %li.list-group-item.list-group-item-action{href: "#"} A second link item
+            %li.list-group-item.list-group-item-action{href: "#"} A second link item
+            %li.list-group-item.list-group-item-action.disabled{"aria-disabled" => "true", href: "#", tabindex: "-1"} A second link item
+        .col-lg-8.col-md-6.mt-4.mt-md-0
+          Bienvenido
+          = current_user.email
+          %hr{ class: 'bg-danger border-2 border-top border-danger' }
+          
+        

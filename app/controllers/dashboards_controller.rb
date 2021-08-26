@@ -1,7 +1,4 @@
-class BoardsController < ApplicationController
-    def index 
-    end
-
+class DashboardsController < ApplicationController
     def profile
       redirect_to(boards_path) unless current_user.present? 
     end
