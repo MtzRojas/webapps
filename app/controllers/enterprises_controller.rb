@@ -35,5 +35,5 @@ class EnterprisesController < ApplicationController
 
   def enterprise_id
     params.permit(:id).to_h[:id]
-  end
+  end 
 end
