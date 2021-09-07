@@ -1,0 +1,70 @@
+/ ======= Hero Section =======
+%section#hero.d-flex.align-items-center
+  .container
+    .row
+      .col-lg-6.pt-5.pt-lg-0.order-2.order-lg-1.d-flex.flex-column.justify-content-center
+        %h1 Estamos Trabajando
+        %h2 Para otorgarte mejores servicios
+        .d-flex
+          %a.btn-get-started.scrollto{:href => "#about"} Log In
+          %a.glightbox.btn-watch-video{:href => ""}
+            %i.bi.bi-play-circle
+            %span Unetenos!!!
+      .col-lg-6.order-1.order-lg-2.hero-img
+        %img.img-fluid.animated
+          =image_tag('shared/working.png')
+/ End Hero
+%main#main
+  / ======= Featured Services Section =======
+  %section#featured-services.featured-services
+    .container
+      .row
+        .col-lg-4.col-md-6
+          .icon-box
+            .icon
+              %i.bi.bi-laptop
+            %h4.title
+              %a{:href => ""} Lorem Ipsum
+            %p.description Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+        .col-lg-4.col-md-6.mt-4.mt-md-0
+          .icon-box
+            .icon
+              %i.bi.bi-card-checklist
+            %h4.title
+              %a{:href => ""} Dolor Sitema
+            %p.description Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata
+        .col-lg-4.col-md-6.mt-4.mt-lg-0
+          .icon-box
+            .icon
+              %i.bi.bi-clipboard-data
+            %h4.title
+              %a{:href => ""} Sed ut perspiciatis
+            %p.description Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+  / End Featured Services Section
+  / ======= About Section =======
+  %section#about.about
+    .container
+      .row
+        .col-lg-6
+          -# %img.img-fluid{:alt => "", :src => "assets/img/about.png"}/
+        .col-lg-6.pt-4.pt-lg-0.content
+          %h3 Voluptatem dignissimos provident quasi corporis voluptates
+          %p.fst-italic
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.
+          %ul
+            %li
+              %i.bi.bi-check-circle
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat
+            %li
+              %i.bi.bi-check-circle
+              Duis aute irure dolor in reprehenderit in voluptate velit
+            %li
+              %i.bi.bi-check-circle
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda
+          %p
+            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur.
+  / End About Section
+/ End #main
+

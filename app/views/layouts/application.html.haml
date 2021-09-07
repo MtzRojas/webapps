@@ -20,9 +20,9 @@
   %body
     = render('shared/unsupported_browser') if supported_ie?
     %Header
-      -if controller.controller_name == 'boards'
+      - if current_user.present? || controller.controller_name == 'boards'
         = render partial: 'layouts/boards_header'
-      -else
+      - else
         = render partial: 'layouts/header'
     %br
     %br
