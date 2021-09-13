@@ -31,3 +31,26 @@
 
 en:
   hello: "Hello world"
+  welcome: 'Hello Buddy :V'
+  welcome_message: "Ma' Frend :V"
+
+  activerecord:
+    models:
+      service: 'Service'
+    attributes:
+      service:
+        name: 'Name'
+        price: 'Price'
+        description: 'Description'
+  
+  form:
+    services:
+      new: 'Services Creation'
+
+  services:
+    index:
+      title: 'Services'
+
+  shared:
+    delete: 'Delete'
+    edit: 'Edit'

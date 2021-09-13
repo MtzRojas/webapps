@@ -1,10 +1,16 @@
-= 'Servicio'
-%br
--  @services.each do |f|
-  = f.name
-  %br
-  = f.price
-  %br
-  = f.description
-  %br
-  %br
+.container 
+  .form-titles=t('services.index.title')
+  .row.justify-content-md-center.border.border-dark.bg-secondary.text-white
+    .col= t('activerecord.attributes.service.name') 
+    .col= t('activerecord.attributes.service.price')
+    .col= t('activerecord.attributes.service.description')
+    .col= t('shared.edit')
+    .col
+  - @services.each do |f|
+    .row.justify-content-md-center.border.border-dark.bg-light
+      .col= f.name
+      .col= f.price
+      .col= f.description
+      .col= link_to(t('shared.edit'), edit_service_path(id: f.id))
+      .col= link_to(t('shared.delete'), service_path(id: f.id), method: :delete)
+ 

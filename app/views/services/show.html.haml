@@ -1,9 +1,14 @@
-= 'Nombre:'
-= @service.name
-%br
-= 'Precio:'
-= @service.price
-%br
-= 'Descripción:'
-= @service.description
-%br
+.container 
+  .form-titles=t('services.index.title')
+  .row.justify-content-md-center.border.border-dark.bg-secondary.text-white
+    .col= t('activerecord.attributes.service.name') 
+    .col= t('activerecord.attributes.service.price')
+    .col= t('activerecord.attributes.service.description')
+    .col= t('shared.edit')
+    .col= t('shared.delete')
+  .row.justify-content-md-center.border.border-dark.bg-light
+    .col= @service.name
+    .col= @service.price
+    .col= @service.description
+    .col= link_to(t('shared.edit'), edit_service_path(id: @service.id))
+    .col= link_to(t('shared.delete'), service_path, method: :delete)

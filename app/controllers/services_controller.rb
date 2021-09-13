@@ -8,7 +8,7 @@ class ServicesController < ApplicationController
 
   def create
     service = Service.create(service_params)
-    redirect_to service_path(service.id)
+    redirect_to(service_path(service.id))
   end
 
   def index
@@ -17,6 +17,22 @@ class ServicesController < ApplicationController
 
   def show
     @service = Service.find(service_id)
+  end
+
+  def edit
+    @service = Service.find(service_id)
+  end
+
+  def update
+    @service = Service.find(service_id)
+    @service.update(service_params)
+    redirect_to(service_path(service_id))
+  end
+
+  def destroy
+    @service = Service.find(service_id)
+    @service.destroy!
+    redirect_to(services_path)
   end
 
   private

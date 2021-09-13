@@ -3,7 +3,7 @@
     .col-sm 
     .col-md-auto
       .form-titles= t('form.services.new')
-      = simple_form_for @service, wrapper: :horizontal_form do |f|
+      = simple_form_for(@service, url: service_path, method: :put,  wrapper: :horizontal_form) do |f|
         = f.input :name
         = f.input :price
         = f.input :description

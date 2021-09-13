@@ -33,3 +33,24 @@ es:
   hello: "Hello world"
   welcome: 'Hola Humano :V'
   welcome_message: 'compa :V'
+
+  activerecord:
+    models:
+      service: 'Servicio'
+    attributes:
+      service:
+        name: 'Nombre'
+        price: 'Precio'
+        description: 'Descripcion'
+
+  form:
+    services:
+      new: 'Creación de Servicios'
+
+  services:
+    index:
+      title: 'Servicios'    
+
+  shared:
+    delete: 'Eliminar'
+    edit: 'Editar'
