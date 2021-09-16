@@ -12,6 +12,7 @@ class EnterprisesController < ApplicationController
   end
 
   def index
+    @enterprises = Enterprise.all
   end
 
   def show
@@ -19,12 +20,19 @@ class EnterprisesController < ApplicationController
   end
 
   def edit
+    @enterprise = Enterprise.find(enterprise_id)
   end
 
   def update
+    @enterprise = Enterprise.find(enterprise_id)
+    @enterprise.update(enterprise_params)
+    redirect_to(enterprise_path(enterprise_id))
   end
 
   def destroy
+    @enterprise = Enterprise.find(enterprise_id)
+    @enterprise.destroy!
+    redirect_to(enterprises_path)
   end
 
   private

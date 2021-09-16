@@ -37,19 +37,31 @@ en:
   activerecord:
     models:
       service: 'Service'
+      enterprise: 'Enterprise'
     attributes:
       service:
         name: 'Name'
         price: 'Price'
         description: 'Description'
+      enterprise:
+        name: 'Name'
+        address: 'Address'
+        legal_representative: 'Legal Representative'
+        phone_number: 'Phone Number'
+        level: 'Level'
   
   form:
     services:
       new: 'Services Creation'
+    enterprises:
+      new: 'Enterprise Creation'
 
   services:
     index:
       title: 'Services'
+  enterprices:
+    index:
+      title: 'Enterprises'
 
   shared:
     delete: 'Delete'

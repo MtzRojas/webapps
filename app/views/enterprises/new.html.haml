@@ -1,7 +1,13 @@
-= simple_form_for @enterprise, wrapper: :horizontal_form do |e|
-  = e.input :name
-  = e.input :address
-  = e.input :legal_representative
-  = e.input :phone_number
-  = e.input :level
-  = e.button :submit
+.container 
+  .row.justify-content-md-center
+    .col-sm 
+    .col-md-auto
+      .form-titles= t('form.enterprises.new')
+      = simple_form_for @enterprise, wrapper: :horizontal_form do |e|
+        = e.input :name
+        = e.input :address
+        = e.input :legal_representative
+        = e.input :phone_number
+        = e.input :level
+        = e.button :submit, class: 'btn'
+    .col-sm  

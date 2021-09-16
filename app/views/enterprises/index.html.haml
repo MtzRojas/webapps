@@ -1,10 +1,20 @@
-= 'Nombre'
-%br
--  @enterprises.each do |e|
-  = e.name
-  %br
-  = e.address
-  %br 
-  = e.phone_number
-  %br
-  %br
+.container 
+  .form-titles=t('enterprises.index.title')
+  .row.justify-content-md-center.border.border-dark.bg-secondary.text-white
+    .col= t('activerecord.attributes.enterprise.name') 
+    .col= t('activerecord.attributes.enterprise.address')
+    .col= t('activerecord.attributes.enterprise.legal_representative')
+    .col= t('activerecord.attributes.enterprise.phone_number')
+    .col= t('activerecord.attributes.enterprise.level')
+    .col= t('shared.edit')
+    .col
+  - @enterprises.each do |e|
+    .row.justify-content-md-center.border.border-dark.bg-light
+      .col= e.name
+      .col= e.address
+      .col= e.legal_representative
+      .col= e.phone_number
+      .col= e.level
+      .col= link_to(t('shared.edit'), edit_enterprise_path(id: e.id))
+      .col= link_to(t('shared.delete'), enterprise_path(id: e.id), method: :delete)
+ 
