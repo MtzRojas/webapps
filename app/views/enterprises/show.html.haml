@@ -1,14 +1,19 @@
-= 'El nombre:'
-= @enterprise.name
-%br
-= 'Dirección:'
-= @enterprise.address
-%br
-= 'Representante Legal:'
-= @enterprise.legal_representative
-%br
-= 'Número de Teléfono:'
-= @enterprise.phone_number
-%br
-= 'Nivel de sociedad:'
-= @enterprise.level
+.container 
+  .form-titles=t('services.index.title')
+  .row.justify-content-md-center.border.border-dark.bg-secondary.text-white
+    .col= t('activerecord.attributes.service.name') 
+    .col= t('activerecord.attributes.service.address')
+    .col= t('activerecord.attributes.service.legal_representative')
+    .col= t('activerecord.attributes.service.phone_number')
+    .col= t('activerecord.attributes.service.level')
+    .col= t('activerecord.attributes.service.submit')
+    .col= t('shared.edit')
+    .col= t('shared.delete')
+  .row.justify-content-md-center.border.border-dark.bg-light
+    .col= @enterprise.name
+    .col= @enterprise.address
+    .col= @enterprise.legal_representative
+    .col= @enterprise.phone_number
+    .col= @enterprise.level
+    .col= link_to(t('shared.edit'), edit_service_path(id: @enterprise.id))
+    .col= link_to(t('shared.delete'), enterprise_path, method: :delete)

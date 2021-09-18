@@ -37,19 +37,31 @@ es:
   activerecord:
     models:
       service: 'Servicio'
+      enterprise: 'Empresa'
     attributes:
       service:
         name: 'Nombre'
         price: 'Precio'
         description: 'Descripcion'
+      enterprise:
+        name: 'Nombre'
+        address: 'Dirección'
+        legal_representative: 'Representante Legal'
+        phone_number: 'Número de Teléfono'
+        level: 'Nivel de Empresa'
 
   form:
     services:
       new: 'Creación de Servicios'
+    enterprises:
+      new: 'Creación de Empresa'
 
   services:
     index:
-      title: 'Servicios'    
+      title: 'Servicios' 
+  enterprices:
+    index:
+      title: 'Empresas'   
 
   shared:
     delete: 'Eliminar'
